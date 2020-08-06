@@ -1,0 +1,53 @@
+{
+  "generator-ngx-rocket": {
+    "appName": "dsu-foodbank-supplier",
+    "target": [
+      "web"
+    ],
+    "pwa": false,
+    "mobile": null,
+    "desktop": null,
+    "ui": "material",
+    "layout": "simple",
+    "auth": false,
+    "lazy": false,
+    "angulartics": false,
+    "languages": [
+      "en-US"
+    ],
+    "analyticsProvider": null,
+    "googleAnalyticsAccount": null,
+    "tools": [],
+    "utility": [],
+    "deploy": "docker",
+    "version": "8.1.1",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "dsu-foodbank-supplier",
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "material",
+      "layout": "simple",
+      "auth": false,
+      "lazy": false,
+      "angulartics": false,
+      "languages": [
+        "en-US"
+      ],
+      "tools": [],
+      "utility": [],
+      "deploy": "docker",
+      "projectName": "dsu-foodbank-supplier",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}
