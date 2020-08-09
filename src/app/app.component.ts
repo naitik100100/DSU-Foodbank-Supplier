@@ -1,3 +1,4 @@
+import { AuthService } from './@shared/service/auth.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -17,19 +18,21 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  public status:any;
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private titleService: Title,
               private translateService: TranslateService,
-              private i18nService: I18nService) { }
+              private i18nService: I18nService,
+              private service: AuthService,
+              ) { }
 
   ngOnInit() {
     // Setup logger
     if (environment.production) {
       Logger.enableProductionMode();
     }
-
     log.debug('init');
 
 
@@ -58,6 +61,20 @@ export class AppComponent implements OnInit, OnDestroy {
           this.titleService.setTitle(this.translateService.instant(title));
         }
       });
+      this.service.getAuthStatus().subscribe((res)=>
+      {
+        this.status=res  
+        console.log(this.status)
+      })
+  }
+
+  logout(){
+    console.log("logout")
+    this.service.reset().subscribe((res)=>{
+      this.status=res
+      console.log(this.status)
+      this.ngOnInit
+    })
   }
 
   ngOnDestroy() {

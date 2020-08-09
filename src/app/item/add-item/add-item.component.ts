@@ -1,3 +1,4 @@
+import { AuthService } from './../../@shared/service/auth.service';
 import { Router } from '@angular/router';
 import { Item } from './../../@shared/service/item.model';
 import { ItemserviceService } from './../../@shared/service/itemservice.service';
@@ -11,10 +12,12 @@ import { NgForm, FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class AddItemComponent implements OnInit {
   addItemForm: FormGroup;
+  status:any
 
-  constructor(public service: ItemserviceService,private formBuilder: FormBuilder,public router:Router) { }
+  constructor(public auth:AuthService,public service: ItemserviceService,private formBuilder: FormBuilder,public router:Router) { }
 
   ngOnInit(): void {
+    console.log(localStorage.getItem('id'))
       if(localStorage.getItem('id')==null){
       this.router.navigate(['/login']);
       }
