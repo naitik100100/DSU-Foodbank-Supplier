@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/main.scss"
             ],
             "scripts": []
@@ -150,5 +151,8 @@
       }
     }
   },
-  "defaultProject": "dsu-foodbank-supplier"
+  "defaultProject": "dsu-foodbank-supplier",
+  "cli": {
+    "analytics": "9a1e6ad2-495d-429f-ba20-11cfde5581ce"
+  }
 }
