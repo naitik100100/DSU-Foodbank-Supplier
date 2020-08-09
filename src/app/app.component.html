@@ -1,1 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/items']" routerLinkActive="router-link-active">Suppliers Dashboard</a>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="nav navbar-nav">
+      <li><a class="nav-item nav-link active" [routerLink]="['/items/additem']"
+        >Add Item <span class="sr-only">(current)</span></a></li>
+     <li> <a class="nav-item nav-link active" [routerLink]="['items']">View Item</a></li> 
+     <li> <a class="nav-item nav-link active" [routerLink]="['']">Login</a></li> 
+    </ul>
+  </div>
+</nav>
 <router-outlet></router-outlet>

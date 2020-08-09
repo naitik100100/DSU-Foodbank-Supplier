@@ -1,0 +1,20 @@
+@import "src/theme/theme-variables";
+
+:host {
+  min-height: 100vh;
+  flex-direction: row;
+  width: 100%;
+}
+.navbar {
+  background-color: #aecae7;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  overflow: hidden;
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

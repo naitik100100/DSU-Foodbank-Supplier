@@ -1,0 +1,45 @@
+            <form [formGroup]="updateItemForm" autocomplete="off" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label class="form-check-label">Item Id</label>
+                    <input
+                      name="itemid"
+                      placeholder="Item Id"
+                      [formControl]="id"
+                      class="form-control"
+                      type="text"
+                      readonly
+                    />
+                    <!-- <div class="validation-error" *ngIf="partName.invalid && partName.touched">
+                      This field cannot be empty
+                    </div> -->
+                  </div>
+                <div class="form-group">
+                  <label class="form-check-label">Item Name</label>
+                  <input
+                    name="itemname"
+                    placeholder="Item Name"
+                    [formControl]="itemname"
+                    class="form-control"
+                    type="text"
+                    required
+                  />
+                  <div class="validation-error" *ngIf="itemname.invalid && itemname.touched">
+                    This field cannot be empty
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-check-label">Quantity</label>
+                  <input
+                    name="quantity"
+                    [formControl]="quantity"
+                    placeholder="Quantity"
+                    class="form-control"
+                    type="number"
+                    required
+                  />
+                  <div class="validation-error" *ngIf="quantity.invalid && quantity.touched">This field cannot be empty</div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" [disabled]="!updateItemForm.valid" class="btn btn-primary">SUBMIT</button>
+                </div>
+              </form>  
