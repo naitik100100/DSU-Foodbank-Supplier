@@ -24,6 +24,7 @@ export class AuthService {
       console.log(res)
       if(res['Item']==null)
       {
+        alert("Invalid User")
       //   this.matDialog.open(MatDialogWrapperComponent,{data:{
       //     header: "Failure",
       //     content: error.error.message

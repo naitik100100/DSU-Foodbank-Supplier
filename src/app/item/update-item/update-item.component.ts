@@ -30,12 +30,14 @@ export class UpdateItemComponent implements OnInit {
   onSubmit() {    
       this.service.editItem(this.updateItemForm.value).subscribe((res)=>{
         console.log("OK")
+        this.dialogRef.close()
       },
       (err)=>
       {
         console.log("error")
       }
       );
+      
     }
   get id() {
     return this.updateItemForm.controls.id;
